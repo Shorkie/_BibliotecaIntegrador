@@ -1,0 +1,38 @@
+﻿@model BibliotecaIntegrador.Models.Genero
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Editar generos</title>
+	<link href="~/Content/bootstrap.css" rel="stylesheet" />
+	<script src="~/Scripts/jquery-3.3.1.js"></script>
+	<script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+	<header class="jumbotron text-center">
+		<h1> @this.ViewBag.TituloPagina </h1>
+	</header>
+
+	<main class="container">
+		<form method="post" id="frm">
+			<label for="Nombre">Genero:</label>
+			@Html.EditorFor(m => m.Nombre,
+					new
+						 {
+						htmlAttributes = new
+						{
+							@class = "form-control",
+						}
+					})
+			<button class="btn btn-primary form-control" style="margin-top:1em">
+				Enviar
+			</button>
+		</form>
+	</main>
+</body>
+</html>

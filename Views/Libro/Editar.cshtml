@@ -1,0 +1,56 @@
+﻿@model BibliotecaIntegrador.Models.Libro
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Editar libros</title>
+	<link href="~/Content/bootstrap.css" rel="stylesheet" />
+	<script src="~/Scripts/jquery-3.3.1.js"></script>
+	<script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+	<header class="jumbotron text-center">
+		<h1> @this.ViewBag.TituloPagina </h1>
+	</header>
+
+	<main class="container">
+		<form method="post" id="frm">
+			<!--ISBN LIBRO - Hacer chequeo -->
+			<label for="ISBN">ISBN:</label>
+			@Html.EditorFor(m => m.ISBN,
+					new
+						 {
+						htmlAttributes = new
+						{
+							@class = "form-control",
+						}
+					})
+			<!--TITULO LIBRO-->
+			<label for="Titulo">Titulo:</label>
+			@Html.EditorFor(m => m.Titulo,
+					new
+						 {
+						htmlAttributes = new
+						{
+							@class = "form-control",
+						}
+					})
+			<!--EDITORIAL LIBRO-->
+			<label for="Editorial">Editorial:</label>
+			<select name="Id_Editorial"></select>
+				@foreach (var editoriales in this.ViewBag.ListaEditoriales)
+				{
+					<option value="">@editoriales.Nombre</option>
+				}
+				<button class="btn btn-primary form-control" style="margin-top:1em">
+					Enviar
+				</button>
+		</form>
+	</main>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f2271a81e77e49ffa4fa9e66ea4ff363" Name="Diagram1">
+        <EntityTypeShape EntityType="AccentureBibliotecaModel.Autore" Width="1.5" PointX="4.125" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccentureBibliotecaModel.Editoriale" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccentureBibliotecaModel.escritoPor" Width="1.5" PointX="7.125" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccentureBibliotecaModel.Genero" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccentureBibliotecaModel.Libro" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="AccentureBibliotecaModel.FK_Autor" ManuallyRouted="false" />
+        <AssociationConnector Association="AccentureBibliotecaModel.FK_Editorial" ManuallyRouted="false" />
+        <AssociationConnector Association="AccentureBibliotecaModel.FK_Libro" ManuallyRouted="false" />
+        <AssociationConnector Association="AccentureBibliotecaModel.FK_Genero" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
